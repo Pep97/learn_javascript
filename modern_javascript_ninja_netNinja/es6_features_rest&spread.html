@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+
+        /* Rest & Spread  -> copy values + turn string into array and viceversa.
+
+        // rest parameter
+        const double = (...nums) => {
+        console.log(nums);
+        return nums.map(num => num*2);
+        };
+
+        const result = double(1,3,5,7,2,4,6,8);
+        console.log(result);
+        // this will return an array with the doubled values of the numbers passed as arguments
+
+        // spread syntax (arrays)
+        const people = ['shaun', 'ryu', 'chun-li'];
+        console.log(...people);
+        // this will return the elements of the array as separate values
+
+        const members = ['mario', 'luigi', ...people];
+        console.log(members);
+        // this will return a new array with the elements of the 'people' array and the elements of the 'members' array
+
+        // spread syntax (objects)
+        const person = { name: 'shaun', age: 30, job: 'net ninja' };
+        const personClone = { ...person, location: 'manchester' }; 
+        // here the values of "person" are copied to "personClone" plus you add the "location" property.
+        // you just created a new object
+        const personClone2 = { person, location: 'San' }; 
+        // this will return an object with the 'person' object as a property and the 'location' property
+        console.log(person, personClone, personClone2); 
+        person.name = 'mario';
+        console.log(person, personClone, personClone2);
+        // in here personClone2 will change the name of the person object, because it's a reference to it
+        
+         */
+
+
+         /* Sets -> remove duplicates from an array + specific method to use. 
+
+        const namesArray = ['ryu', 'chun-li', 'ryu', 'shaun'];
+        console.log(namesArray);
+        // this is what you get in the console -> ["ryu", "chun-li", "ryu", "shaun"]
+
+        
+        const namesSet = new Set(namesArray);
+        console.log(namesSet);
+        // "set" doesn't allow duplicates
+        // this is what you get in the console -> Set(3) {"ryu", "chun-li", "shaun"}
+
+
+        const uniqueNames = [...new Set(namesArray)];
+        console.log(uniqueNames);
+        // in this way you just deleted the duplicates and turn back a set into an array
+        // this is what you get in the console -> ["ryu", "chun-li", "shaun"]
+
+        const ages = new Set();
+        ages.add(20);
+        ages.add(25).add(30);
+        ages.add(25); // this won't be added because it's a duplicate
+        ages.delete(30)
+
+        console.log(ages, ages.size); // .size is the method to get the length of the set
+        console.log(ages.has(30), ages.has(20)); // .has is the method to check if the value is in the set and it will return a boolean
+
+        ages.clear();
+        console.log(ages);
+
+        const ninjas = new Set([
+        {name: 'shaun', age: 30},
+        {name: 'crystal', age: 29},
+        {name: 'chun-li', age: 32}
+        ]);
+
+        ninjas.forEach(ninja => {
+        console.log(ninja.name, ninja.age);
+        });
+
+        */
+
+
+        /* symbols -> unique values
+
+        // no two symbols can be the same, they are always unique
+
+        const symbolOne = Symbol('a generic name');
+        const symbolTwo = Symbol('a generic name');
+
+        console.log(symbolOne, typeof symbolOne);
+        console.log(symbolOne === symbolTwo); // this will return false
+
+        // symbols are used to add properties to objects that are not going to interfere with other properties
+
+        const ninja = {};
+
+        ninja.age = 30;
+        ninja['belt'] = 'orange';
+        ninja['belt'] = 'black';
+
+        ninja[symbolOne] = 'ryu';
+        ninja[symbolTwo] = 'shaun';
+
+        console.log(ninja);
+        console.log(ninja[symbolOne], ninja[symbolTwo]);
+
+        */
+
+
+
+
+    </script>
+    
+</body>
+</html>

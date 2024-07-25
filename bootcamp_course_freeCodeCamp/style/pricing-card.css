@@ -1,0 +1,139 @@
+html {
+    box-sizing: border-box;
+    font-family: 'karla';
+    font-size: 16px;
+}
+
+body {
+    padding: 20px;
+}
+
+h2, h4, p, ul {
+    margin: 0;
+}
+
+*, *:before *:after{
+    box-sizing: inherit;
+}
+
+#card {
+    width: 600px;
+    height: 400px;
+    box-shadow: 0px 1px 17px -4px rgba(0,0,0,0.75);
+    border-radius: 5px; /* you will notice here that your bottom corners are not rounded  
+    this is because the 2 sections are over writing your current input.*/
+    overflow: hidden; /* this is saying you have anything breaking-out of your main container
+    just hide it. therefore the corners are now good.  */
+}
+
+#top-section {
+    width: 100%;
+    height: 45%;
+    padding: 20px;
+    box-sizing: border-box;
+
+
+}
+
+#top-section h2 {
+    color: #2ab2af;
+    margin-bottom: 15px;
+}
+
+#top-section h4 {
+    color: rgb(177, 177, 7);
+    margin-bottom: 10px;
+}
+
+#top-section p {
+    color: rgb(145, 141, 141);
+}
+
+#bottom-section{
+    width: 100%;
+    height: 55%;
+    color: white;
+}
+
+#bottom-left-section{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background-color: #2ab2af;
+    vertical-align: top;
+     /* you should add     padding: 20px;   */
+     padding: 20px;
+     box-sizing: border-box;
+
+}
+
+#bottom-left-section h4{
+    margin-bottom: 15px;
+
+}
+
+#bottom-left-section p{
+font-size: 0.9rem;
+margin-bottom: 40px;
+}
+
+
+#bottom-right-section{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background-color: #2EBFBD;
+         /*  you should add     padding: 20px;   */
+    padding: 20px;
+    box-sizing: border-box;
+
+
+}
+
+ul {
+    padding: 0;
+    list-style: none; /*This removes the default bullet list */
+    padding-top: 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+
+
+}
+
+button {
+    color: white;
+    background-color: #c0df34;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #a1a814;
+     transform: scale(1.03);
+ }
+
+#price-container , #price-frequency {
+    font-weight: 700;
+    font-size: 1.4rem;
+    display: inline-block;
+    
+}
+
+#price-container {
+    padding: 5px 5px 5px 0px;
+}
+
+#price-frequency {
+    position: relative;
+    top: -3px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-left: -15px;
+    padding: 10px;
+}
+

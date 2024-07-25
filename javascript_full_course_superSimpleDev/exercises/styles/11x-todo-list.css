@@ -1,0 +1,52 @@
+body {
+    font-family: Arial;
+}
+
+
+/* in this way you can modify 2 classes at the same */
+.todo-grid,
+.todo-input-grid {
+    display: grid;
+    grid-template-columns: 200px 150px 100px; 
+    /*This define how many column there will be in our grid 
+    in this case it will create 3 columns 1 = 200pcs 2 = 150px 3= 100px
+    and now each element inside the div will go into the column
+    - if we have more than 3 elements it will wrap around and create a new row*/
+    column-gap: 10px;
+    /* this set the space between each column, same below for row */
+    row-gap: 10px;
+    align-items: center;
+
+}
+
+.todo-input-grid {
+    margin-bottom: 10px;
+    align-items: stretch;
+    
+}
+
+.name-input,
+.due-date-input {
+    font-size: 15px;
+    padding: 6px;
+    
+
+}
+
+.add-todo-button {
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 15px; 
+    cursor: pointer;
+}
+
+.delete-todo-button {
+    background-color: darkred;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

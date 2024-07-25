@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>11i</title>
+  </head>
+  <body>
+
+
+
+    <script>
+
+/*
+      let addNumber = [1,2,3];
+
+function addNum(array) {
+  const result = [];
+  const num1 = 2;
+
+  for (let i = 0; i < array.length; i++) {
+    result.push(array[i] + num1);
+  }
+
+  return result;
+} // in this way you add +1 with a function.
+
+
+let number2 = [2,2,5];
+let number3 = [5,2,2];
+
+function addArrays(array1, array2) {
+    let result1 = [];
+    for(let i1 = 0; i1 < array1.length; i1++) {
+        result1.push(array1[i1] + array2[i1]);
+    }
+    return result1;
+}
+
+// in this way you add 2 arrays together
+
+
+
+function countPositive(nums) {
+        let result = 0;
+
+        for (let i = 0; i < nums.length; i++) {
+          if (nums[i] > 0) {
+            result++;
+          }
+        }
+
+        return result;
+      }
+
+      let number4 = [-2,-1,5,3,1];
+      
+
+      // define how many values over 0 are into an array.
+
+     
+
+
+
+
+console.log(minMax(number5))
+
+function minMax(nums) {
+        // We'll set the starting values of min and max
+        // as the first value in the array. (This is
+        // just one way to set the starting values. You
+        // can use another way if you like.)
+        const result = {
+          min: nums[0],
+          max: nums[0]
+        };
+
+        for (let i = 0; i < nums.length; i++) {
+          const value = nums[i];
+
+          // If the value is less than the min,
+          // update the min.
+          if (value < result.min) {
+            result.min = value;
+          }
+
+          // If the value is greater than the max,
+          // update the max.
+          if (value > result.max) {
+            result.max = value;
+          }
+        }
+
+        return result;
+      }
+
+      let number5 = [-2,-1,5,3,1];
+
+      console.log(minMax(number5)); 
+      //take min and max numbers from an array
+       */
+
+       function countWords(words) {
+        const result = {};
+
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+
+          // result[word] adds/accesses a property using whatever is
+          // saved inside the 'word' variable.
+          // If word = 'apple', result[word] will do result['apple']
+          // If word = 'grape', result[word] will do result['grape']
+          if (!result[word]) {
+            result[word] = 1;
+          } else {
+            result[word]++;
+          }
+        }
+
+        return result;
+      }
+
+       let arrayWords = ['apple','grape','apple','apple']
+
+       console.log(countWords(arrayWords))
+
+       // counts how many times a value is repeated inside an array;
+      
+
+
+    </script>
+  </body>
+</html>

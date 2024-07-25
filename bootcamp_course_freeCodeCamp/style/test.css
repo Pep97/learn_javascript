@@ -1,0 +1,16 @@
+@media (min-width: 992px) {
+    h1 {
+        color: green;
+    }
+}
+
+/* 576px -> below is screen phone
+    992px ->  below is screen table
+*/
+
+
+@media (min-width: 576px) {
+    h1 {
+        color: red;
+    }
+}

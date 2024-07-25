@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>DOM projects</title>
+  </head>
+  <body>
+
+    <p>Youtube Subscribe Button</p>
+    <button onclick="Subscribe();" class="js-subscribe-button">
+    Subscribed
+</button>
+
+     
+
+<p>Amazon Shipping Calculator</p>
+<input placeholder="Cost of order" class="js-cost-input" onkeydown="handleCostKeyDown(event);
+">
+<button onclick="calculateTotal();">Calculate</button>
+<p class="js-total-cost"></p>
+
+
+
+
+
+    <script>
+
+      
+/*
+      clicks, keydowns -> events
+      onclick, onkeydown -> event listeners
+
+      Event Listeners list
+
+      onclick = click
+      onkeydown = key press
+      onscroll = scrolling
+      onmouseenter = hovering over
+      onmouseleave = stop hovering over
+
+
+      .document -> represent the webpage
+      .window -> represent the browser
+      */
+
+
+      String(25)
+      console.log('25' - 5); // if a string only contains a number it will be converted into a number.
+      console.log('25' + 5); // in this case the result will be 255. don't quite understand why.
+
+      window.document
+      window.console
+      window.alert
+
+
+
+
+
+
+      function handleCostKeyDown(event) {
+        if (event.key === 'Enter') {
+  calculateTotal();
+}
+      };
+
+
+      function calculateTotal() {
+        const inputElement = document.querySelector('.js-cost-input');
+        //inputElement.value -> get the text inside the textbox
+        let cost = Number(inputElement.value);
+
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+
+        document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+      }
+
+
+
+
+        /*
+      Process for JS:
+      1 - Figure out what steps we need (algorithm)
+      2 - Convert these steps into code
+
+      */
+
+      function Subscribe() {
+                const buttonElement = document.querySelector('.js-subscribe-button');
+            
+            if (buttonElement.innderText === 'Subscribe') {
+                buttonElement.innerHTML = 'Subscribed';
+            } else {
+                buttonElement.innerHTML = 'Subscribe';
+            };
+            }
+
+      // min 7:11:39
+    </script>
+  </body>
+</html>
+

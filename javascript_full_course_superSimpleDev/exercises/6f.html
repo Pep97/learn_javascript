@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time day</title>
+  </head>
+  <body>
+   
+    <button onclick="
+    
+    let randomNumber = Math.random();
+    let computerMove = '';
+
+
+if (randomNumber <= 0.5) {
+    computerMove = 'heads';
+} else if (randomNumber > 0.5) {
+    computerMove = 'tails';
+}
+   
+let guess = '';
+if (computerMove === 'heads') {
+    guess = 'You win!';
+} else if (computerMove === 'tails') {
+    guess = 'You lose!';
+}
+alert(`${guess}`);
+
+    ">heads</button>
+
+ <button onclick="
+    
+const randomNumber = Math.random();
+let computerMove = '';
+
+if (randomNumber <= 0.5) {
+computerMove = 'heads';
+} else if (randomNumber > 0.5) {
+computerMove = 'tails';
+}
+
+let guess = '';
+if (computerMove === 'heads') {
+guess = 'You lose!';
+} else if (computerMove === 'tails') {
+guess = 'You win!';
+}
+
+alert(`${guess}`);
+
+">tails</button>
+
+
+    <script>
+
+
+    </script>
+  </body>
+</html>

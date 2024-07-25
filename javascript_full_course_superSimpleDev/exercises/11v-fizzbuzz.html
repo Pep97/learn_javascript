@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+
+    <script>
+
+    
+    let numbers = [];
+    for (let i = 1; i < 21; i++ ) {
+        numbers.push(i);
+    }
+
+    
+    function fizzBuzz(division) {
+        for (let i = 0; i < division.length; i++){
+        if (division[i] % 3 === 0 && division[i] % 5 === 0) {
+            division[i] = 'FizzBuzz';
+        }
+        }
+        for (let i = 0; i < division.length; i++){
+        if (division[i] % 3 === 0) {
+            division[i] = 'Fizz';
+        }
+        }
+        for (let i = 0; i < division.length; i++){
+        if (division[i] % 5 === 0) {
+            division[i] = 'Buzz';
+        }
+        }
+        
+    return division;
+    } 
+
+     
+    console.log(fizzBuzz(numbers));
+    
+    </script>
+    
+</body>
+</html>

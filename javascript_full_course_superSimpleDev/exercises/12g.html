@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>    
+
+    <button onclick="updateNumber('add')">Add</button>
+<button onclick="updateNumber('remove')">Remove</button>
+
+
+
+<script>
+    
+
+        let numberNotification = 0;
+        let intervalId = 0;
+
+        function updateNumber(buttonId) {
+            if (buttonId === 'add') {
+                numberNotification++;
+            } else if (buttonId === 'remove') {
+                numberNotification--;
+            } 
+
+            if (numberNotification === 0) {
+                document.title = 'App';
+                if (intervalId !== 0) {
+                    clearInterval(intervalId);
+                    intervalId = 0;
+                }
+            } else if (numberNotification < 0) {
+                document.title = 'App';
+                if (intervalId < 0) {
+                    document.title === 'App'
+                }
+            }
+            else if (intervalId === 0) {
+                intervalId = setInterval(function() {
+                    if (document.title === 'App') {
+                        document.title = `(${numberNotification}) New messages`;
+                    } else {
+                        document.title = 'App';
+                    }
+                
+                }, 1000);
+            }
+        }
+    
+
+   
+
+
+/*
+
+setInterval(function() {
+        if (document.title === 'App') {
+          document.title = '(2) New messages';
+        } else {
+          document.title = 'App';
+        }
+      }, 1000); // change the title to show notifications.
+
+      */
+
+    </script>
+
+</body>
+</html>
+

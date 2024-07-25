@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+                // Object Oriented Programming (OOP) in JavaScript
+
+        /* Class + Constructor function
+
+        class User {
+            constructor(username, email){  // this is a constructor function
+                // this.username = 'mario';
+                this.username = username;
+                this.email = email;
+            }
+        }
+
+        const userOne = new User('luigi', 'luigi@thenetninja.co.uk');
+        const userTwo = new User('mario', 'mario@thenetninja.co.uk');
+
+        console.log(userOne, userTwo);
+
+        // the 'new' keyword
+        // 1 - it creates a new empty object {}
+        // 2 - it binds the value of 'this' to the new empty object
+        // 3 - it calls the constructor function to 'build' the object
+
+        */
+
+        /* Method in a class + chain methods 
+
+        class User {
+            constructor(username, email){
+                this.username = username;
+                this.email = email;
+                this.score = 0;
+            }
+            login(){ // this is a method
+                console.log(`${this.username} just logged in`);
+                // when a method doesn't return anything, it will return 'undefined'
+                return this; // this is used to chain methods, you're returning the object itself, 
+                // so that you can call another method on it later on
+                // of course, you can also pass a specific value to return
+            }
+            logout(){
+                console.log(`${this.username} just logged out`);
+                return this;
+            }
+            incScore(){
+                this.score += 1;
+                console.log(`${this.username} has a score of ${this.score}`);
+                return this;
+            }
+        }
+
+        const userOne = new User('luigi', 'luigi@thenetninja.co.uk');
+        const userTwo = new User('mario', 'mario@thenetninja.co.uk');
+
+        // userOne.login();
+        // userOne.logout();
+        // userTwo.login();
+        // userTwo.logout();
+
+        userTwo.login()
+        .incScore()
+        .incScore()
+        .logout();
+
+        */
+
+        /* class inheritance or sub-classes in Javascript -> example with user & admin. 
+
+        // class inheritance or sub-classes is a way to create a new class using another class as a base
+        // but also add their own methods and properties
+
+        // a sub-class extends a base class 
+
+        class User {
+            constructor(username, email){
+                this.username = username;
+                this.email = email;
+                this.score = 0;
+            }
+            login(){
+                console.log(`${this.username} just logged in`);
+                return this;
+            }
+            logout(){
+                console.log(`${this.username} just logged out`);
+                return this;
+            }
+            incScore(){
+                this.score += 1;
+                console.log(`${this.username} has a score of ${this.score}`);
+                return this;
+            }
+        }
+
+        class Admin extends User { // this is a sub-class
+            deleteUser(user){
+                users = users.filter(u => u.username !== user.username);
+                // "u" is a user in the array, and we're filtering out the user that we want to delete
+                // if the username used as parameter is not equal to the username in the array, it will be returned
+                // therefore it will be deleted only the user used as parameter, because u.username will be equal to user.username
+                return this; // allow method chaining
+            }
+        }
+
+        const userOne = new User('luigi', 'luigi@thenetninja.co.uk');
+        const userTwo = new User('mario', 'mario@thenetninja.co.uk');
+        const userThree = new Admin('shaun', 'shaun@thenetninja.co.uk');
+
+        console.log(userOne, userThree);
+
+        let users = [userOne, userTwo, userThree];
+        console.log(users);
+
+        userThree.deleteUser(userTwo);
+        console.log(users);
+        */
+
+        /* super() -> add custom properties to the sub-class 
+
+
+        class User {
+        constructor(username, email){
+            this.username = username;
+            this.email = email;
+            this.score = 0;
+            }
+            login(){
+                console.log(`${this.username} just logged in`);
+                return this;
+            }
+            logout(){
+                console.log(`${this.username} just logged out`);
+                return this;
+            }
+            incScore(){
+                this.score += 1;
+                console.log(`${this.username} has a score of ${this.score}`);
+                return this;
+            }
+        }
+
+        class Admin extends User {
+            constructor(username, email, title){ //inside here you can add custom properties to the sub-class
+                // with this new costructor, the old one won't be used anymore
+                super(username, email);
+                // with super() you call the constructor of the parent class and run it.
+                this.title = title;
+            }
+            deleteUser(user){
+                users = users.filter(u => u.username !== user.username);
+                return this; // allow method chaining
+            }
+        }
+
+        const userOne = new User('luigi', 'luigi@thenetninja.co.uk');
+        const userTwo = new User('mario', 'mario@thenetninja.co.uk');
+        const userThree = new Admin('shaun', 'shaun@thenetninja.co.uk', 'black-belt ninja');
+
+        console.log(userOne, userThree);
+
+         */
+
+        /* constructor functions -> was the old  before the class syntax was introduced in ES6
+
+
+        // constructor functions
+
+        // new way to create a class in javascript
+        // class User {
+        //   constructor(username){
+        //     this.username = username;
+        //   }
+        // }
+
+        // old way to create a class in javascript
+        function User(username, email){
+            this.username = username;
+            this.email = email;
+            this.login = function(){ // this is how you write a method
+                console.log(`${this.username} has logged in`);
+            };
+        }
+
+        const userOne = new User('ryu', 'ryu@thenetninja.co.uk');
+        const userTwo = new User('chun-li', 'chun.li@thenetninja.co.uk');
+
+        console.log(userOne, userTwo);
+        userOne.login();
+
+        */
+
+        /* prototype model -> way to add methods to a constructor function 
+
+
+        function User(username, email){
+        this.username = username;
+        this.email = email;
+        }
+
+        User.prototype.login = function(){
+        console.log(`${this.username} has logged in`);
+        return this;
+        };
+
+        User.prototype.logout = function(){
+        console.log(`${this.username} has logged out`);
+        return this;
+        };
+
+        const userOne = new User('ryu', 'ryu@thenetninja.co.uk');
+        const userTwo = new User('chun-li', 'chun.li@thenetninja.co.uk');
+
+        console.log(userOne);
+
+        userOne.login().logout();
+
+        */
+
+        /* prototype inheritance -> way to create a sub-class using a constructor function 
+
+        function User(username, email){
+            this.username = username;
+            this.email = email;
+        }
+
+        User.prototype.login = function(){
+            console.log(`${this.username} has logged in`);
+            return this;
+        };
+
+        User.prototype.logout = function(){
+            console.log(`${this.username} has logged out`);
+            return this;
+        };
+
+        // admin
+        function Admin(username, email){
+          User.call(this, username, email);
+          // this is used to call the constructor function of the parent class
+          // call (this) is the first argument to call the constructor function of the parent class
+          // and the rest of the arguments are the arguments that the parent class expects
+        }
+
+        Admin.prototype = Object.create(User.prototype);
+
+        Admin.prototype.deleteUser = function(user){
+        // delete the user
+        };
+
+        const userOne = new User('ryu', 'ryu@thenetninja.co.uk');
+        const userTwo = new User('chun-li', 'chun.li@thenetninja.co.uk');
+        const userThree = new Admin('shaun', 'shaun@thenetninja.co.uk');
+
+        console.log(userThree);
+
+        */
+
+
+    </script>
+    
+</body>
+</html>

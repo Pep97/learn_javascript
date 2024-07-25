@@ -1,0 +1,8 @@
+[
+    {"text": "play mariokart", "done": false},
+    {"text": "buy groceries", "done": true},
+    {"text": "go to the gym", "done": false},
+    {"text": "clean the house", "done": true},
+    {"text": "do the laundry", "done": false}
+
+]

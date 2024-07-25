@@ -1,0 +1,56 @@
+body {
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    
+}
+
+.body-calculator {
+   display: flex;
+   justify-content: center;
+   margin-top: 10%;
+}
+
+.gray-button {
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+.orange-button {
+    background-color: rgb(254, 160, 10);
+    color: white;
+}
+
+
+.calculator-button {
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.clear-button {
+    font-size: 17px;
+    float: left;
+    margin-right: 5px;
+}
+
+.js-result {
+    height: 60px;
+    width: 200px;
+}
+
+.calculator {
+    border: grey solid 5px;
+    padding: 10px 30px;
+    padding-bottom: 20px;
+    width: 275px;
+    height: 385px;
+    
+}
+
+
+  

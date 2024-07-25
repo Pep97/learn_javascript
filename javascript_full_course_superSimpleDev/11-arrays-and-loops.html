@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+
+    <!-- Arrays is another type of value and it represents a list of other value
+    you can save them into a variable
+    arrays = list of values -->
+
+    
+
+    <script>
+
+      /*
+
+        const myArray = [10,20,30];
+        console.log(myArray);
+
+        // index = the number you put inside the [] it represents the position of the value inside the array.
+        // the index starts at 0, this is called 0-indexed array.
+        myArray[0] = 99; // this is how you change the value of an array.
+        
+        console.log(myArray[0]);
+
+        // you can put any type of value inside an array. you can also put an array inside an array.
+
+        [1, 'hello', true, { name: 'socks '}, [1,2]];
+
+        console.log(typeof [1,2]);
+
+        // an array is an object, but it is a special object.
+        // to understand if it is an array you can use the formula below.
+
+        console.log(Array.isArray([1, 2]));
+
+        console.log(myArray.length); // this will tell you how many values are in the array. 
+
+        // .push = add a new value to the array.
+
+        myArray.push(100);
+        console.log(myArray);
+
+        
+        .splice = remove a value to the array.
+        1. index we want to remove
+        2. numbers of values to remove -> if you add more than 1 it will remove the values after the index you selected.
+        
+        myArray.splice(0, 1);
+        console.log(myArray);
+
+        
+
+        // Loops = let us run some code over and over.
+
+        let i = 1;
+
+        // True: loop will keep going
+        // False: loop will stop
+        //while loop = while the condition inside while is true, it will keep running.
+        // loop condition = (i <= 5)
+        // loop body = console.log(i); i = i + 1;
+        // let i = 1; =  loop variable
+        // increment step = i = i + 1;  -> without it the loop will keep running.
+        // iteration = every type you run a loop
+        // loops create a scope -> any variable that we creates between {} only exist inside the {} .
+        while (i <= 5) {
+          console.log(i);
+          i++;
+          // you can also write it as 1) i = i + 1;  2) i += 1;
+          // once 'i' is 6 the formula will be false and therefore will stop.
+        }
+
+        // types of loop: 1) while loop 2) For Loop
+        // For Loop = shorter version of a While Loop
+        /* which should you use? the standard is the For Loop
+        if it's a non-standard loop you should use a While Loop
+
+        What's a non-standard loop?
+
+        it doesn't have a loop variable that increase every time and
+        it doesn't have an increment step.
+
+        
+        for (let i = 1; i <= 5; i++) {
+          console.log(i);
+        }
+
+        // this is a non-standard loop
+
+        let randomNumber = 0;
+
+        while (randomNumber < 0.5) {
+          randomNumber = Math.random();
+        } 
+
+        console.log(randomNumber);
+
+        
+        
+
+        Looping Through an Array
+
+        1. go through each value of an array one by one.
+        2. do something with each value
+        
+
+        const todoList = [
+          'make dinner',
+          'wash dished',
+          'watch youtube'
+          
+        ];
+
+        // instead of typing 'Index' you can type 'i'
+
+        for (let i = 0; i < todoList.length ; i++) {
+          const value = todoList[i]; // this const you access the value inside the index
+          console.log(value);
+        }
+
+        
+
+        const nums = [1,1,3];
+        let total = 0;
+
+        for (let i = 0; i < nums.length; i++ ) {
+          const num = nums[i];
+          total += num;
+        } // in this way you calculate the total numbers inside the array.
+
+        console.log(total);
+
+        const numsDoubled = [];
+
+        for (let i = 0; i < nums.length; i++) {
+          const num = nums[i]; 
+          numsDoubled.push(num * 2); // in this way you double your array.
+        }
+
+        console.log(numsDoubled);
+
+        
+
+        //arrays are references, objects are references too.
+
+        const array1 = [1,2,3];
+        const array2 = array1;
+        array2.push(4);
+        console.log(array1);
+        console.log(array2);
+
+        // you will get the same result and both arrays will be modified.
+        // since they are reference they both point to the same array
+
+        
+        
+        const array1 = [1,2,3];
+        const array2 = array1.slice(); 
+        // slice() it will create a copy of the value.
+        // now the arrays points to two different arrays and you get the correct value.
+        array2.push(4);
+        console.log(array1);
+        console.log(array2);
+
+        const [firstValue, secondValue] = [1,2,3]; // this will take the first value and save it into a variable called firstValue.
+
+        
+
+
+        // Loops have 2 features: 1. break = exit a loop early 2. continue = skip 1 iteration
+
+        for (let i = 1; i <= 10; i++) {
+          // if (i === 3) {continue;} 
+
+          if (i % 3 === 0) {
+            continue;
+          } // in this way you skip all the numbers divisible by 3
+          console.log(i);
+          if (i === 8 ) {
+            break; // break = stop the loop
+          }
+        }
+
+        
+
+        let i = 1;
+        while (i <= 10)  {
+          if (i % 3 === 0) {
+            i++;
+            continue;
+
+          } // in while loop you can't use 'continue' because it will skipp the increment text because this will cause an infinite loop.
+          // you need to add the increment step manually like the formula above.
+          console.log(i);
+          i++;
+        }
+
+        */
+
+        function doubleArray(nums) {
+            
+            const numsDoubled = [];
+
+            for (let i = 0; i < nums.length; i++) {
+              const num = nums[i];
+              if (num === 0) {
+                return numsDoubled; // the return statement will end the function immediatly 
+              }
+              numsDoubled.push(num * 2);
+            }
+
+            return numsDoubled;
+          }
+
+          console.log(doubleArray([1,1,3]));
+          console.log(doubleArray([2,2,5,0,5]));
+
+    </script>
+  </body>
+</html>

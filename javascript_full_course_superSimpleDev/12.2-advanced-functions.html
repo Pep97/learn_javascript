@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Functions</title>
+</head>
+<body>
+
+    <!-- <button onclick="" class="js-button">Click</button>  -->
+    
+
+    <script>
+
+
+
+
+
+         /* 
+
+        EVENT LISTENER
+
+        const buttonElement = document.querySelector('.js-button');
+
+        // .addEventListener()    -> lets us run some code when we interact with the element
+        // parameters inside  ->  1. event 2.a function we want to run
+
+        const eventListener = () => {
+            console.log('click');
+        }
+
+        buttonElement.addEventListener('click', eventListener);
+        buttonElement.addEventListener('click', () => {
+            console.log('click2')
+        });
+
+        // you select onclick just by typing 'click'.
+
+        buttonElement.removeEventListener('click', eventListener);
+
+
+       
+        
+        ARROW FUNCTION
+
+        difference between a normal fuction and an arrow fuction
+
+        const regularFunction = function() {
+            console.log('hello');
+        };
+
+        const arrowFunction = () => {
+            console.log('hello');
+            return 5;
+        };
+
+        arrowFunction();
+
+        KEY DIFFERENCES
+
+        1) arrow functions have shortcuts
+
+       
+        const oneParam = param => {
+            console.log(param + 1);
+            
+        }; // if the parameter is one you can remove the brakets 
+ 
+        oneParam(2);
+
+        const oneLine = () =>  2+3; 
+        // it will automatically return the out on the right and the function is closed.
+
+        console.log(oneLine());
+
+        - when passing a function inside another function is recommended to use ARROW FUNCTIONS
+
+        
+
+        const object2 = {
+            method: () => {
+
+            },
+            method(){}
+        };
+
+        2 MORE ARRAY METHODS
+
+        filter() 
+
+        
+
+        // it will take 1 value and run the function and then will continue with each value after
+        
+
+        console.log([1, -3, 5].filter((value, index) => {
+            return true;
+            //if return true -> it will put the function into a new array
+            //if return false -> it won't put the function into a new array
+
+        }));
+
+        
+
+        console.log([1, -3, 5].filter((value, index) => {
+
+           
+
+            if (value >= 0) {
+                return true;
+            } else { 
+                return false;
+            }
+
+            
+
+
+            return value >= 0;
+            
+
+        }));
+
+        map()  -> will transoform an array into another array
+
+        1. creates a new array
+        2. whatever we return => added to new array
+
+        console.log([1,1,3].map((value,index) => {
+            return value * 2;
+        }));
+
+        if you have only 1 parameter you can remove brackes and return
+
+                console.log([1,1,3].map(value => value * 2));
+
+        CLOSURE
+
+        if a function has access to a value it will always have access to that value.
+        value gets packaged together (enclosed) with the function.
+
+
+        document.querySelector('.js-todo-list').innerHTML = todoListHTML;
+
+        document.querySelectorAll('.js-delete-todo-button')
+            .forEach((deleteButton, index) => {
+                deleteButton.addEventListener('click', () => {
+                    console.log(index);
+                    todoList.splice(index, 1);
+                renderTodoList();
+                }); 
+            });
+
+       
+        }
+
+        // in this case console.log will return 0
+
+        document.querySelectorAll('.js-delete-todo-button')
+            .forEach((deleteButton, index) => {
+                deleteButton.addEventListener('click', () => {
+                    console.log(index);
+                    todoList.splice(index, 1);
+                renderTodoList();
+                });
+            });
+
+        }
+
+                // in this case console.log will return nothing
+
+
+
+        */
+
+
+    </script>
+    
+</body>
+</html>

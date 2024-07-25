@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11r</title>
+
+</head>
+<body>
+    <script>
+
+/* 
+let foodList = ['apple', 'ham', 'milk','egg'];
+function removeEgg(foods, word) {
+    let found = false;
+    for (let i = 0; i < foods.length ; i++) {
+        if (foods[i] === word) {
+            foods.splice(i, 1);
+            found = true;
+            break;
+        }
+    }
+    if (!found) {
+        foods.push(word);
+    }
+    return foods;
+}
+console.log(removeEgg(foodList,'egg')); 
+// check if a string is present inside an array and if it is remove it, if it is not add it.
+*/
+
+/*  In your code, foods.splice(i, 1); is used to remove one element from the foods array at the index position i.
+
+Here’s a breakdown:
+
+i is the index at which to start changing the array.
+1 is the number of elements in the array to remove from i.
+So, foods.splice(i, 1); starts at index i and removes one element from the foods array.
+*/
+
+
+
+/*
+function removeEgg(foods) {
+        const result = [];
+
+        for (let i = 0; i < foods.length; i++) {
+          // If the string is 'egg', use continue to skip it.
+          if (foods[i] === 'egg') {
+            continue;
+          }
+
+          // We don't need to have an else here because
+          // the only way to reach this code is if the 
+          // if-statement above is false.
+          result.push(foods[i]);
+        }
+
+        return result;
+      }
+
+      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham', 'egg']));
+
+      // check if the string 'egg' is present and if it is, it skip it in the result.
+      */
+
+
+/*
+
+let foodList = ['egg', 'apple', 'egg' , 'ham', 'milk','egg'];
+function removeEgg(foods, word) {
+    let counter = 0;
+    
+    for (let i = 0; i < foods.length ; i++) {
+        if (foods[i] === word) {
+            foods.splice(i, 1);
+            i--; // Decrement i to adjust the index after splicing
+            counter++;
+            if (counter === 2) {
+                break;
+            }
+        }
+    }
+    if (counter < 2) {
+        foods.push(word);
+    }
+    return foods;
+}
+console.log(removeEgg(foodList,'egg'));
+// this removes the first 2 'egg' found into an array.
+ */
+
+ /* 
+let foodList = ['egg', 'apple', 'egg' , 'ham', 'milk','egg'];
+function removeEgg(foods, word) {
+    let counter = 0;
+    foods.reverse();
+    
+    for (let i = 0; i < foods.length ; i++) {
+        if (foods[i] === word) {
+            foods.splice(i, 1);
+            i--; // Decrement i to adjust the index after splicing
+            counter++;
+            if (counter === 2) {
+                break;
+            }
+        }
+    }
+    if (counter < 2) {
+        foods.push(word);
+    }
+    return foods;
+}
+console.log(removeEgg(foodList,'egg'));
+// by doing the reverse, you're removing the last 2.
+*/
+
+/*
+
+let foodList = ['egg', 'apple', 'egg' , 'ham', 'milk','egg'];
+function removeEgg(foods, word) {
+
+    let fakefood = foods.slice();
+    let counter = 0;
+    fakefood.reverse();
+    
+    for (let i = 0; i < fakefood.length ; i++) {
+        if (fakefood[i] === word) {
+            fakefood.splice(i, 1);
+            i--; // Decrement i to adjust the index after splicing
+            counter++;
+            if (counter === 2) {
+                break;
+            }
+        }
+    }
+    if (counter < 2) {
+        fakefood.push(word);
+    }
+    return fakefood;
+}
+console.log(removeEgg(foodList,'egg'));
+console.log(foodList);
+
+this is the result you get:
+['milk', 'ham', 'apple', 'egg']
+['egg', 'apple', 'egg', 'ham', 'milk', 'egg']
+
+with slice() you create a copy of the array and you don't modify the original one.
+
+*/
+
+        
+    
+
+    </script>
+</body>
+</html>

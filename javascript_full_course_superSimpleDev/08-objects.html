@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+
+  <body>
+
+    <script>
+        /*the const with {} is an object. 
+        and it let us group multiple values together.
+        name and price -> is property
+        'socks' and 1090 -> is value
+        name: 'socks'; -> is a property-value pair
+
+        why use objects? -> organize better code,
+        group and use multiple value together.
+
+        
+       const product = {
+        name: 'socks',
+        price: 1090
+       }; 
+       console.log(product);
+       console.log(product.name);
+       console.log(product.price);
+
+       // with a property you can change the value of an object.
+       product.name = 'cotton socks';
+       console.log(product);
+
+       // you can create new properties and delete them.
+       product.newProperty = true;
+       console.log(product);
+
+       delete product.newProperty;
+       console.log(product);
+
+       
+
+    // - NESTED OBJECT -> it's an object inside an object
+
+       const product2 = {
+        name: 'shirt',
+        'deliver-time': '1 day',
+        rating: {
+            stars: 4.5,
+            count: 87
+        },
+
+        // funtion inside an a object is called Method.
+        fun: function funtion1 () {
+            console.log('function inside object');
+        }
+       };
+
+       /* properties made with [] let use use properties 
+       that don't work wirh dot notation.
+
+       normally use dot notation. 
+
+       - inside an abject, we can save any type of value
+
+       - NESTED OBJECT -> it's an object inside an object
+       
+
+       console.log(product2.name);
+       console.log(product2['name']);
+
+       console.log.(product2.rating.count);
+       product2.fun();
+
+
+       Built-in Objects -> they are provided by the language
+       like for example -> console.log() & math.random()
+       
+       JSON (JavaScript Object Notation) -> it's a syntax similar
+       to a JS object but it has less features
+
+       JSON's rules -> you need to use "" and not ''.
+       you can use fuctions inside of it.
+
+       why JSON? -> JS objects can be understood only inside JS.
+       a JSON object can be understood by multiple languages.
+       -> we use JSON when we send data between computers.
+       -> we use JSON when we store data
+
+       stringify -> turns a JS object into a JSON object. (ONLY strings)
+       
+
+       console.log(JSON.stringify(product2));
+
+       parse -> turns a JSON object into a JS object.
+
+       const jsonString = JSON.stringify(product2);
+       console.log(JSON.parse(jsonString));
+
+       ---------
+
+       Variables are temporary -> if we refresh the page, all the variables are deleted
+    
+
+       Local Storage
+
+       When something doesn't exist in localStorage you're going to get NULL
+
+       few lines you wrote in rock-paper-scissors
+
+            localStorage.removeItem('score');
+     ">Reset Score</button>
+
+    <script>
+
+      let score = JSON.parse(localStorage.getItem('score')) || {
+            wins: 0,
+            losses: 0,
+            ties: 0,
+          };
+
+          /*
+      if (!score) {
+        score = {
+          wins: 0,
+          losses: 0,
+          ties: 0,
+        };
+      }
+
+              localStorage.setItem('score', JSON.stringify(score));
+
+
+      NULL -> is falsy and represent that something doesn't have a value.  
+      
+      auto-boxing -> JS wrap a string into a special object. it also works with boolean and numbers.
+      but it doesn't work with null or undefined.
+
+            console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+
+      objects are references -> in this case "message: 'hello" is a reference and it saves everything in your computer
+      to be faster. in this case you're not copying object1 you're directing object2 to object1.
+
+      const object1 = {
+        message: 'hello'
+      };
+
+      const object2 = object1;
+
+      object1.message = 'Good job!';
+      console.log(object1);
+
+      const object3 = {
+        message: 'Good job!'
+      };
+
+      console.log(object3 === object1); -> this will be false.
+      console.log(object2 === object1); -> this will be true
+
+      in this case object3 and object1 aren't the same, because JS compare the reference, 
+      and in here you created 2 different messages, so they are different. even tough the 
+      inside is the same.
+      second case, the reference is the same, and so it's true.
+
+
+       const object4 = {
+        message: 'Good job!',
+        price: 799
+      };
+      const message = object4.message;
+      const { message , price} = object4;
+
+      console.log(message);
+      console.log(price);
+
+      const object5 = {
+        message,
+        // method: function function1() {
+        //    console.log('method');
+        }
+        method() {
+            console.log('method');
+        }
+      };
+
+      console.log(object5);
+      object5.method();
+
+      */
+      
+     
+
+
+    </script>
+  </body>
+</html>
